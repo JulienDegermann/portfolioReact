@@ -1,4 +1,12 @@
-import { Colors } from "../core/colors";
+import { Colors } from "../core/styles/colors";
+
+interface SectionProps {
+  id: string,
+  title?: string,
+  children?: React.ReactNode
+  large?: boolean
+  hero?: boolean
+}
 
 export default function Section(
   { id, title, children, large, hero }: SectionProps
@@ -38,12 +46,4 @@ export default function Section(
       </div>
     </section>
   )
-}
-
-interface SectionProps {
-  id: string,
-  title?: string,
-  children?: React.ReactNode
-  large?: boolean
-  hero?: boolean
 }

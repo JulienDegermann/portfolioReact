@@ -1,8 +1,17 @@
 import { useState } from "react";
-import { Colors } from "../core/colors";
+import { Colors } from "../core/styles/colors";
 
-export default function Link (
-  { color, variant, text, link, blank }: LinkProps
+interface LinkProps {
+  color?: string
+  variant?: 'outlined' | 'contained'
+  text?: string
+  link?: string
+  blank?: boolean
+  image?: string
+}
+
+export default function Link(
+  { color, variant, text, link, blank, image }: LinkProps
 ) {
 
   const [linkVariant, setLinkVariant] = useState(variant)
@@ -30,15 +39,8 @@ export default function Link (
       onMouseEnter={toggleVariant}
       onMouseLeave={toggleVariant}
     >
-      {text}
+      {image ? image : text}
     </a>
   )
 }
 
-interface LinkProps {
-  color?: string
-  variant?: 'outlined' | 'contained'
-  text: string
-  link?: string
-  blank?: boolean
-}

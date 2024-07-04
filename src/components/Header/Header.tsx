@@ -1,4 +1,4 @@
-import { Colors } from "../../core/colors";
+import { Colors } from "../../core/styles/colors";
 import NavBar from "./NavBar/NavBar";
 
 export default function Header() {

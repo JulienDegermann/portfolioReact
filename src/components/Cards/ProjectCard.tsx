@@ -1,30 +1,11 @@
 // import { useEffect } from 'react'
-import { Colors } from '../../core/colors'
+import { Colors } from '../../core/styles/colors'
+import { ProjectProps } from '../ProjectCarousel/ProjectCarousel'
 // import axios from 'axios'
 
 export default function ProjectCard(
-  { project, selector, selected }: ProjectCardProps) {
+  { project, selector, selected }: Props) {
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       console.log("start axios request")
-  //       const res = await axios.get(project.link)
-  //       console.log(res)
-  //       const pasrser = new DOMParser()
-  //       const doc = pasrser.parseFromString(res.data, 'text/html')
-  //       // const metaTags = doc.querySelectorAll('meta[property^="og:"]')
-  //       // console.log(metaTags)
-
-  //     }
-  //     catch (error) {
-  //       console.error(project.title, error)
-  //     }
-  //   }
-
-  //   getData()
-
-  // }, [project.link])
   return (
     <div
       style={{
@@ -60,16 +41,8 @@ export default function ProjectCard(
   )
 }
 
-export interface ProjectProps {
-  title?: string
-  description?: string
-  image?: string
-  link: string
-  stacks?: string[]
-}
-
-interface ProjectCardProps {
+interface Props {
   project: ProjectProps
-  selector?: (project: ProjectProps) => void
+  selector?: (project: ProjectProps) => void 
   selected: boolean
 }

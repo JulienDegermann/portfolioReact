@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Colors } from "../core/colors";
+import { Colors } from "../core/styles/colors";
 
 export default function Button(
   { color, variant, text, onClick }: ButtonProps

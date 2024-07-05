@@ -1,6 +1,9 @@
 // import { useEffect } from 'react'
-import { Colors } from '../../core/styles/colors'
-import { ProjectProps } from '../ProjectCarousel/ProjectCarousel'
+
+import { ProjectProps } from ".."
+import { Colors } from "../../../../../../core/styles/colors"
+
+
 // import axios from 'axios'
 
 export default function ProjectCard(

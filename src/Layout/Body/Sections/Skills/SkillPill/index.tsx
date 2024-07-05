@@ -1,8 +1,7 @@
-// import { ProjectContext } from "../hooks/contexts/useProjects.tsx";
-// import { useContext, useState } from "react";
 import { useState } from "react";
-import { defaultStyles, customStyles } from "../core/styles/skillPills.ts";
-import { SkillProps } from "../core/datas/skills.ts";
+import { SkillProps } from "../../../../../core/datas/skills";
+import { customStyles, defaultStyles } from "../../../../../core/styles/skillPills";
+
 
 
 interface Props {

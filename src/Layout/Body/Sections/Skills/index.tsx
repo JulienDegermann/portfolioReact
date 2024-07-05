@@ -1,7 +1,8 @@
-import Section from "../Section";
-import SkillPill from "../SkillPill";
 import { useContext } from "react";
-import { StacksContext } from "../../hooks/contexts/useStacks";
+import { StacksContext } from "../../../../hooks/contexts/useStacks";
+import Section from "../../../../components/Section";
+import SkillPill from "./SkillPill";
+
 
 export default function Skills() {
 

@@ -1,9 +1,9 @@
-import { NavItemProps } from './NavItem/NavItem';
+import { NavItemProps } from './NavItem';
 
 /**
  * @description Array of objects containing the URL and text for each navigation link
  */
-export const navLinks: NavItemProps[] = [
+export const routes: NavItemProps[] = [
   {
     url: '/#',
     text: 'Home'

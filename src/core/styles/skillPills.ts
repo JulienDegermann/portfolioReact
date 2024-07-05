@@ -22,6 +22,10 @@ const frontSkills = [
   'javascript',
   'java script',
   'react',
+  'reactjs',
+  'reactnative',
+  'react js',
+  'react native',
   'tailwind',
   'twig',
   'typescript',
@@ -50,6 +54,7 @@ const backSkills = [
   'postgresql',
   'sql',
   'api',
+  'api platform',
   'rest',
   'graphql',
 

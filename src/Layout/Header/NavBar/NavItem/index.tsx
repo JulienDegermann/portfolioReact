@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Colors } from '../../../../core/styles/colors';
+import { Colors } from '../../../../../core/styles/colors';
 
 export default function NavItem(
   { url, text, imageUrl }: NavItemProps

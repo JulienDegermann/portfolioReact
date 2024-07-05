@@ -1,4 +1,4 @@
-import { Colors } from "../core/styles/colors";
+import { Colors } from "../../core/styles/colors";
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
       <div
         className="container"
         style={{
-          display: 'flex',
+          display: 'flex'
         }}
       >
         <p

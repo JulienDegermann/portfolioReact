@@ -1,5 +1,7 @@
-import { Colors } from "../../core/styles/colors";
-import Section from "../Section";
+
+
+import Section from "../../../components/Section";
+import { Colors } from "../../../core/styles/colors";
 import Image from "../../assets/images/me.webp";
 
 export default function Presents() {

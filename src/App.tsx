@@ -1,11 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { ProjectContextProvider } from "./hooks/contexts/useProjects";
-import Header from "./components/Header/Header";
-import ScrollBar from "./components/ScrollBar";
 import { ScrollContextProvider } from "./hooks/contexts/useScroll";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
 import { StacksContextProvider } from "./hooks/contexts/useStacks";
+import Layout from "./Layout";
+
 
 
 export default function App() {
@@ -31,10 +29,7 @@ export default function App() {
       <ProjectContextProvider>
         <ScrollContextProvider>
           <StacksContextProvider>
-            <ScrollBar />
-            <Header />
-            <Body />
-            <Footer />
+            <Layout />
           </StacksContextProvider>
         </ScrollContextProvider>
       </ProjectContextProvider>

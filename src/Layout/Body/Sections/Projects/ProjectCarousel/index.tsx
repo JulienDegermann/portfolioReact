@@ -1,8 +1,9 @@
-import { Colors } from "../../core/styles/colors.ts";
-import ProjectCard from "../Cards/ProjectCard.tsx";
-import { useContext, useMemo, useState } from 'react';
-import Link from "../Link";
-import { ProjectContext } from "../../hooks/contexts/useProjects.tsx";
+import { useContext, useMemo, useState } from "react"
+import { ProjectContext } from "../../../../../hooks/contexts/useProjects"
+import ProjectCard from "./ProjectCard"
+import { Colors } from "../../../../../core/styles/colors"
+import Link from "../../../../../components/Link"
+
 
 
 export default function ProjectCarousel() {

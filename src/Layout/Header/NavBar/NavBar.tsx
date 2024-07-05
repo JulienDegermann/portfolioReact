@@ -1,6 +1,5 @@
-import NavItem from './NavItem/NavItem';
-import { navLinks } from './index.ts';
-// import { router } from '../../../core/router';
+import NavItem from './NavItem/index.tsx';
+import { routes } from '../../../../core/routes';
 
 export default function NavBar() {
 
@@ -27,7 +26,7 @@ export default function NavBar() {
       >
 
         {
-          navLinks.map((link, index) => (
+          routes.map((link, index) => (
             <NavItem
               key={index}
               url={link.url}

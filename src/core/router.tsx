@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import Skills from "../components/sections/Skills";
+
 import Home from "../views/Home";
+import Skills from "../Layout/Body/Sections/Skills";
 
 
 export const router = createBrowserRouter([

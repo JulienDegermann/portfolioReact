@@ -1,4 +1,4 @@
-import { Colors } from "../../core/styles/colors";
+import { Colors } from "../../../core/styles/colors";
 import NavBar from "./NavBar/NavBar";
 
 export default function Header() {
@@ -9,7 +9,7 @@ export default function Header() {
         width: '100%',
         height: '125px',
         top: 0,
-        left: 0,
+        left: 0,  
         backgroundColor: Colors.DARK,
         padding: '1.5rem',
         display: 'flex',

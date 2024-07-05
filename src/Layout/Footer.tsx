@@ -1,4 +1,4 @@
-import { Colors } from "../../core/styles/colors";
+import { Colors } from "../core/styles/colors";
 
 export default function Footer() {
   return (

@@ -1,6 +1,7 @@
-import { Colors } from "../../core/styles/colors";
-import Section from "../Section";
-import Card from "../Cards/Card";
+import Card from "../../../components/Cards/Card";
+import Section from "../../../components/Section";
+import { Colors } from "../../../core/styles/colors";
+
 
 export default function Values() {
   

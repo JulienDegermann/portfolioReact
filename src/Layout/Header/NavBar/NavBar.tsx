@@ -1,5 +1,5 @@
 import NavItem from './NavItem/index.tsx';
-import { routes } from '../../../../core/routes';
+import { routes } from '../../../core/routes';
 
 export default function NavBar() {
 

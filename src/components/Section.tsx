@@ -1,4 +1,5 @@
-import { Colors } from "../core/styles/colors";
+import { Colors } from "../core/styles/colors"
+
 
 interface SectionProps {
   id: string,

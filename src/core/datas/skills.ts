@@ -2,7 +2,6 @@ export interface SkillProps {
   name: string,
   category: string
 }
-
 // skills' list (request html back-end)
 export const skills: SkillProps[] = [
   {

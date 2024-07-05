@@ -17,9 +17,10 @@ export default function NavItem(
       }}
       onMouseEnter={() => { setHovered(true) }}
       onMouseLeave={() => { setHovered(false) }}
-      // onMouseDown={() => { setActive(true) }}
-      // onMouseUp={() => { setActive(false) }}
+    // onMouseDown={() => { setActive(true) }}
+    // onMouseUp={() => { setActive(false) }}
     >
+
       <a
         href={url}
         style={{

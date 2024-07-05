@@ -3,7 +3,7 @@ import Link from './Link'
 import { NetworkProps } from '../core/datas/networks'
 
 export default function ContactPill(
-  network: NetworkProps
+  { network }: {network: NetworkProps}
 ) {
   return (
     <Link

@@ -1,12 +1,14 @@
 import Section from "../Section";
-import { skills } from "../../core/datas/skills";
 import SkillPill from "../SkillPill";
-
-
+import { useContext } from "react";
+import { StacksContext } from "../../hooks/contexts/useStacks";
 
 export default function Skills() {
+
+  const stacks = useContext(StacksContext)
+
   //randomize skills order
-  skills.sort(() => Math.random() - 0.5)
+  stacks.sort(() => Math.random() - 0.5)
 
   return (
     <Section id="skills" title="Mon Nuage de Compétences">
@@ -18,7 +20,7 @@ export default function Skills() {
         }}
       >
         {
-          skills.map((skill, index) => (
+          stacks.map((skill, index) => (
             <SkillPill
               key={index}
               skill={skill}

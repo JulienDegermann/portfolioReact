@@ -7,7 +7,11 @@ export const ScrollContext = createContext(
   }
 );
 
-export const ScrollContextProvider = (children: JSX.Element | JSX.Element[]) => {
+interface Props {
+  children: JSX.Element | JSX.Element[]
+}
+
+export const ScrollContextProvider = ({ children }: Props) => {
 
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -22,7 +26,7 @@ export const ScrollContextProvider = (children: JSX.Element | JSX.Element[]) => 
   }, [])
 
   const scrollPercentage = useMemo(() => {
-    
+
     const documentHeight = document.documentElement.scrollHeight
     const windowHeight = window.innerHeight
     const scroll = (scrollPosition / (documentHeight - windowHeight)) * 100
@@ -37,7 +41,6 @@ export const ScrollContextProvider = (children: JSX.Element | JSX.Element[]) => 
         scrollPercentage
       }}
     >
-
       {children}
     </ScrollContext.Provider>
   )

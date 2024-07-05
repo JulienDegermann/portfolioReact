@@ -1,11 +1,13 @@
 import NavItem from './NavItem/NavItem';
 import { navLinks } from './index.ts';
+// import { router } from '../../../core/router';
 
 export default function NavBar() {
+
   return (
     <nav
       style={{
-        position: 'relative'      
+        position: 'relative'
       }}
     >
       <ul
@@ -23,16 +25,15 @@ export default function NavBar() {
           flex: '1'
         }}
       >
+
         {
-          navLinks.map((link, index) => {
-            return (
-              <NavItem
-                key={index}
-                url={link.url}
-                text={link.text}
-              />
-            )
-          })
+          navLinks.map((link, index) => (
+            <NavItem
+              key={index}
+              url={link.url}
+              text={link.text}
+            />
+          ))
         }
       </ul>
     </nav >

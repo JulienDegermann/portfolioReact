@@ -15,45 +15,110 @@ export const defaultStyles: defaultStylesProps = {
 }
 
 
+// define skills categories
+const frontSkills = [
+  'html',
+  'css',
+  'javascript',
+  'java script',
+  'react',
+  'tailwind',
+  'twig',
+  'typescript',
+  'type script',
+  'sass',
+  'bootstrap',
+  'jquery',
+  'vue',
+  'nuxt',
+  'angular',
+  'wordpress',
+  'material-ui',
+  'bulma',
+  'materialui',
+  'api-platform',
+  'apiplatform',
+  'seo',
+]
+const backSkills = [
+  'php',
+  'nodes',
+  'symfony',
+  'express',
+  'mongodb',
+  'mysql',
+  'postgresql',
+  'sql',
+  'api',
+  'rest',
+  'graphql',
+
+]
+const designSkills = [
+  'figma',
+  'adobe xd',
+  'photoshop',
+  'illustrator',
+  'ux',
+  'ui'
+]
+const communicationSkills = ['mail',
+  'slack',
+  'discord',
+  'whatsapp',
+  'meet',
+  'zoom',
+  'teams'
+]
+const DevToolsSkills = [
+  'git',
+  'github',
+  'gitflow',
+  'ci/cd',
+  'gitlab',
+  'vscode',
+  'terminal',
+  'postman',
+  'trello',
+  'kanban',
+  'notion',
+  'scrum',
+  'agile'
+]
 
 
 export const customStyles = (skill: SkillProps) => {
-  switch (skill.category) {
-    case 'front':
-      return {
-        background: Colors.PRIMARY,
-        color: Colors.DARK,
-      }
-    case 'back':
-      return {
-        background: Colors.DARK,
-        color: Colors.LIGHT,
-      }
-    case 'tool':
-      return {
-        background: Colors.LIGHT,
-        color: Colors.DARK,
-      }
-    case 'communication':
-      return {
-        background: 'transparent',
-        color: Colors.DARK,
-      }
-    case 'gestion':
-      return {
-        background: Colors.DARK,
-        color: Colors.LIGHT,
-      }
-    case 'design':
-      return {
-        background: Colors.SECONDARY,
-        color: Colors.LIGHT,
-      }
-    default:
-      return {
-        background: Colors.LIGHT,
-        color: Colors.DARK,
-      }
+  if (frontSkills.includes(skill.name.toLowerCase())) {
+    return {
+      background: Colors.PRIMARY,
+      color: Colors.DARK,
+    }
+  }
+
+  if (backSkills.includes(skill.name.toLowerCase())) {
+    return {
+      background: Colors.DARK,
+      color: Colors.LIGHT,
+    }
+  }
+
+  if (DevToolsSkills.includes(skill.name.toLowerCase())) {
+    return {
+      background: Colors.LIGHT,
+      color: Colors.DARK,
+    }
+  }
+  if (communicationSkills.includes(skill.name.toLowerCase())) {
+    return {
+      background: 'transparent',
+      color: Colors.DARK,
+    }
+  }
+  if (designSkills.includes(skill.name.toLowerCase())) {
+    return {
+      background: Colors.SECONDARY,
+      color: Colors.LIGHT,
+    }
   }
 }
 

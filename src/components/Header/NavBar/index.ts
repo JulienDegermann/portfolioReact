@@ -27,5 +27,10 @@ export const navLinks: NavItemProps[] = [
   {
     url: '/#contact',
     text: 'Contact'
-  }
+  },
+  {
+    url: '/skills',
+    text: 'SKILLER'
+  },
+
 ]

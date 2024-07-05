@@ -3,8 +3,7 @@ import { useContext } from "react";
 import { ScrollContext } from "../hooks/contexts/useScroll";
 
 export default function ScrollBar() {
-
-  const scrollPercentage = useContext(ScrollContext);
+  const { scrollPercentage } = useContext(ScrollContext);
 
   return (
     <div
@@ -13,7 +12,7 @@ export default function ScrollBar() {
         position: 'fixed',
         top: '0',
         left: '0',
-        width: `${scrollPercentage}%`,
+        width: `${scrollPercentage.toString()}%`,
         height: '5px',
         backgroundColor: Colors.PRIMARY,
         borderRadius: '0 5px 5px 0',

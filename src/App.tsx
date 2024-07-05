@@ -2,16 +2,15 @@ import { useState, useEffect, useRef } from "react";
 import { ProjectContextProvider } from "./hooks/contexts/useProjects";
 import Header from "./components/Header/Header";
 import ScrollBar from "./components/ScrollBar";
-import Presents from "./components/sections/Presents";
-import Projects from "./components/sections/Projects";
-import Skills from "./components/sections/Skills";
+import { ScrollContextProvider } from "./hooks/contexts/useScroll";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+import { StacksContextProvider } from "./hooks/contexts/useStacks";
 
 
 export default function App() {
-
   const [visibility, setVisibility] = useState(false)
   const lastTitle = useRef(document.title)
-
   /**
    * Change the title of the page when the tab is not visible
    */
@@ -20,9 +19,7 @@ export default function App() {
       document.title = visibility ? lastTitle.current : 'REVIENS !'
       visibility ? setVisibility(false) : setVisibility(true)
     }
-
     document.addEventListener('visibilitychange', handleVisibility)
-
     return () => {
       document.removeEventListener('visibilitychange', handleVisibility)
     }
@@ -31,15 +28,16 @@ export default function App() {
 
   return (
     <>
-      {/* <ScrollContextProvider> */}
-        <ProjectContextProvider>
-          <ScrollBar />
-          <Header />
-          <Presents />
-          <Projects />
-          <Skills />
-        </ProjectContextProvider>
-      {/* </ScrollContextProvider> */}
+      <ProjectContextProvider>
+        <ScrollContextProvider>
+          <StacksContextProvider>
+            <ScrollBar />
+            <Header />
+            <Body />
+            <Footer />
+          </StacksContextProvider>
+        </ScrollContextProvider>
+      </ProjectContextProvider>
     </>
   )
 }

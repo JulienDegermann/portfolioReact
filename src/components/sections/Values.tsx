@@ -3,6 +3,8 @@ import Section from "../Section";
 import Card from "../Cards/Card";
 
 export default function Values() {
+  
+
   return (
     <Section id="services" title='Mes valeur de dév' large={true}>
       <div

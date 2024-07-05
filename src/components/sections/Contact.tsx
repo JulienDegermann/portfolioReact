@@ -1,9 +1,8 @@
 import Section from "../Section"
 import { networks } from "../../core/datas/networks"
-// import ContactPill from "../ContactPill"
+import ContactPill from "../ContactPill"
 
 export default function Contact() {
-  console.log(networks)
   return (
     <Section
           id="contact"
@@ -15,7 +14,7 @@ export default function Contact() {
               justifyContent: 'center',
             }}
           >
-            {/* {
+            {
               networks.map((network, index) => {
                 return (
                   <ContactPill
@@ -24,7 +23,7 @@ export default function Contact() {
                   />
                 )
               })
-            } */}
+            }
 
           </div>
         </Section>

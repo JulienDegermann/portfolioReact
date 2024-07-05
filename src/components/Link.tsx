@@ -15,6 +15,7 @@ export default function Link(
 ) {
 
   const [linkVariant, setLinkVariant] = useState(variant)
+  const logo = image ? `../assets/images/networks/${image}` : null;
 
   const toggleVariant = () => {
     const newVariant = linkVariant === 'outlined' ? 'contained' : 'outlined'
@@ -39,7 +40,8 @@ export default function Link(
       onMouseEnter={toggleVariant}
       onMouseLeave={toggleVariant}
     >
-      {image ? image : text}
+      {logo && <img src={logo} alt={`logo de ${text}`} style={{ width: '20px', height: '20px', marginRight: '10px' }} />}
+      {image ? '' : text ? text : ''}
     </a>
   )
 }

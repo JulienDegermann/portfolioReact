@@ -16,7 +16,7 @@ export default function Presents() {
         }}
       >
         <img
-          src= {Image}
+          src={Image}
           alt="Photo de moi"
           style={{
             maxWidth: '300px',

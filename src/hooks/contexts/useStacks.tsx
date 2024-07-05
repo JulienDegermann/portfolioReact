@@ -1,21 +1,21 @@
 import axios from "axios"
 import { useEffect, useState, createContext } from "react"
-import { ProjectProps } from "../../components/ProjectCarousel/ProjectCarousel"
+import { SkillProps } from "../../core/datas/skills"
 
 
-export const ProjectContext = createContext<ProjectProps[]>([])
+export const StacksContext = createContext<SkillProps[]>([])
 
 interface Props {
   children: JSX.Element | JSX.Element[]
 }
 
-export const ProjectContextProvider = ({ children }: Props) => {
-  const [projects, setProjects] = useState([])
+export const StacksContextProvider = ({ children }: Props) => {
+  const [stacks, setStacks] = useState([])
 
   const apiConnection = async () => {
     try {
       const datas = await axios.get('https://127.0.0.1:8002/api');
-      setProjects(datas.data.projects);
+      setStacks(datas.data.stacks);
     }
     catch (error) {
       console.log(error);
@@ -27,11 +27,11 @@ export const ProjectContextProvider = ({ children }: Props) => {
   }, [])
 
   return (
-    <ProjectContext.Provider
-      value={projects}
+    <StacksContext.Provider
+      value={stacks}
     >
       {children}
-    </ProjectContext.Provider>
+    </StacksContext.Provider>
   )
 }
 

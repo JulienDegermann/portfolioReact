@@ -21,7 +21,7 @@ export default function Footer() {
             width: '100%'
           }}
         >
-          Developed by Julien DEGERMANN</p>
+          Designed and developed with ♥️ by Julien DEGERMANN</p>
 
       </div>
 

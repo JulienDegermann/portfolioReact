@@ -13,10 +13,10 @@ export default function ScrollBar() {
         top: '0',
         left: '0',
         width: `${scrollPercentage.toString()}%`,
-        height: '5px',
-        backgroundColor: Colors.PRIMARY,
+        height: '2px',
+        // backgroundColor: Colors.PRIMARY,
+        backgroundColor: Colors.DARK,
         borderRadius: '0 5px 5px 0',
-        boxShadow: `0 0 10px 4px ${Colors.PRIMARY}`,
         zIndex: 1000,
       }
       }

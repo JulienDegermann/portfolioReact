@@ -1,0 +1,25 @@
+section {
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 90px;
+}
+
+section.hero {
+    padding: 0;
+    margin-top: 0;
+}
+
+section .sectionTitle {
+    color: var(--DARK);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-align: left;
+    border-bottom: 1px solid var(--DARK);
+    font-size: 32px;
+}
+
+section .container:where(.large, .hero) {
+    max-width: 100%;
+}

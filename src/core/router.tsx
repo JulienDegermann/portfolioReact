@@ -1,17 +1,33 @@
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 
-import Home from "../views/Home";
-import Skills from "../Layout/Body/Sections/Skills";
-
+import Home from "../Pages/Home";
+import Contact from "../Pages/Contact";
+import Creations from "../Pages/Creations";
+import Layout from "../Layout";
+import News from "../Pages/News";
 
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/skills",
-    element: <Skills />
-  }
+    {
+        path: "/",
+        element: <Layout/>,
+        children: [
+            {
+                index: true,
+                element: <Home/>,
+            },
+            {
+                path: "contact",
+                element: <Contact/>
+            },
+            {
+                path: "creations",
+                element: <Creations/>
+            },
+            {
+                path: "news",
+                element: <News/>
+            },
+        ]
+    },
 
 ])

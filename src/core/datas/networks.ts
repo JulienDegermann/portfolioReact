@@ -16,9 +16,9 @@ export const networks: NetworkProps[] = [
     icon: 'github.svg'
   },
   {
-    name: 'e-mail',
+    name: 'mail',
     url: 'mailto:degermann.julien@gmail.com',
-    icon: 'email.svg'
+    icon: 'mail.svg'
   },
   {
     name: 'phone',

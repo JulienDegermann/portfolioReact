@@ -1,29 +1,56 @@
 :root {
-  --PRIMARY: #F4D35E;
-  --SECONDARY: #C20114;
-  --LIGHT: #FFFFFF;
-  --DARK: #0C120C;
-  --BACK: #0c120c3b;
+    /* colors */
+    --PRIMARY: #FFC700;
+    --SECONDARY: #C20114;
+    --LIGHT: #F7F6F1;
+    --DARK: #3B3A37;
+    --BACK: #0c120c3b;
+    --BACK: #999999;
+
+    /*  gradients */
+    --LIGHT_TO_TRANSPARENT: linear-gradient(180deg, var(--LIGHT) 70%, transparent 100%)
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all .3s;
 }
 
+header, footer, div {
+    width: inherit;
+}
+
+
+*::selection{
+    color:var(--DARK);
+    background:var(--PRIMARY);
+
+}
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--BACK);
-  color: var(--DARK);
+    background: var(--LIGHT);
+    color: var(--DARK);
+    font-family: 'alumni sans';
+    letter-spacing: .05em;
+    font-size: 18px;
 }
 
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }

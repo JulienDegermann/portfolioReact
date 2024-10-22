@@ -14,7 +14,7 @@ export const StacksContextProvider = ({ children }: Props) => {
 
   const apiConnection = async () => {
     try {
-      const datas = await axios.get('https://127.0.0.1:8002/api');
+      const datas = await axios.get('https://127.0.0.1:8000/api');
       setStacks(datas.data.stacks);
     }
     catch (error) {

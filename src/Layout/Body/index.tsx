@@ -1,11 +1,10 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "../../core/router";
+import {Outlet} from "react-router-dom";
 
 
 export default function Body() {
-  return (
-    <main>
-      <RouterProvider router={router} />
-    </main>
-  )
+    return (
+        <main>
+            <Outlet />
+        </main>
+    )
 }

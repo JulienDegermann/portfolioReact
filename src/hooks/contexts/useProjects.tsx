@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState, createContext } from "react"
-import { ProjectProps } from "../../components/ProjectCarousel/ProjectCarousel"
+import { ProjectProps } from "../../components/Cards/Card"
 
 
 export const ProjectContext = createContext<ProjectProps[]>([])
@@ -14,7 +14,7 @@ export const ProjectContextProvider = ({ children }: Props) => {
 
   const apiConnection = async () => {
     try {
-      const datas = await axios.get('https://127.0.0.1:8002/api');
+      const datas = await axios.get('https://127.0.0.1:8000/api');
       setProjects(datas.data.projects);
     }
     catch (error) {

@@ -12,7 +12,7 @@ export default function Card(
       style={{
         flex: hovered ? 2 : 1,
         height: '100%',
-        border: hovered ? `8px solid ${Colors.PRIMARY}` : `2px solid ${Colors.LIGHT}`,
+        border: hovered ? `8px solid ${Colors.LIGHT}` : `2px solid ${Colors.LIGHT}`,
         lineHeight: '2',
         transition: 'all .25s',
         background: `url("/src/assets/images/${image}") no-repeat center center`, 
@@ -26,7 +26,7 @@ export default function Card(
 
       <div
         style={{
-          background: Colors.PRIMARY,
+          background: Colors.LIGHT,
           position: 'absolute',
           width: '100%',
           bottom: 0,

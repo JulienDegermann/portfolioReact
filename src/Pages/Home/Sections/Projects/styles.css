@@ -1,0 +1,30 @@
+
+#creationsWrapper {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.creation {
+    display: inline-block;
+    width: max-content;
+    max-width: 200px;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    transition: all .3s !important;
+
+    p {
+        font-style: italic;
+        color: gray;
+    }
+
+    &:hover {
+        /*background: var(--PRIMARY);*/
+        /*color: var(--LIGHT);*/
+        box-shadow: 2px 2px 0 3px var(--PRIMARY);
+        /*background: var(--PRIMARY);*/
+        box-shadow: 2px 2px 0 3px var(--DARK);
+        transform: scale(1.1);
+    }
+}

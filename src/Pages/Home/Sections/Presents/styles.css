@@ -1,0 +1,48 @@
+#presents {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#presents > div {
+    display: flex;
+    /*justify-content: flex-end;*/
+    /*align-items: flex-end;*/
+}
+
+#presents img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#contact {
+    font-size: 32px;
+}
+
+#presents #heroTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 64px;
+    font-size: 64px;
+    height: 100%;
+    margin-top: 15%;
+
+    span {
+        font-weight: bold;
+        background: var(--PRIMARY);
+        font-size: 96px;
+    }
+
+    div {
+        font-size: 32px;
+        background: var(--LIGHT);
+        width: max-content;
+    }
+}

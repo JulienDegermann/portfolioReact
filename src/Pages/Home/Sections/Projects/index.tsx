@@ -3,7 +3,7 @@ import "./styles.css";
 
 import { useContext } from "react";
 import { ProjectContext } from "../../../../hooks/contexts/useProjects.tsx";
-import { ProjectProps } from "./ProjectCarousel";
+import { ProjectProps } from "../../../../components/Cards/Card.tsx";
 
 export default function Projects() {
     const projects: ProjectProps[] = useContext(ProjectContext);

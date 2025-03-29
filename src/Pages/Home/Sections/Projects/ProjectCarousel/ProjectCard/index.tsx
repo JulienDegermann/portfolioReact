@@ -1,6 +1,6 @@
 // import { useEffect } from 'react'
 
-import { ProjectProps } from "../index.tsx"
+import { ProjectProps } from "../../../../../../components/Cards/Card"
 import { Colors } from "../../../../../../core/styles/colors.ts"
 
 

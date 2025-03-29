@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState, createContext } from "react";
 import { SkillProps } from "../../core/datas/skills";
 
@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const StacksContextProvider = ({ children }: Props) => {
-    const [stacks, setStacks] = useState([]);
+    const [stacks] = useState([]);
 
     const apiConnection = async () => {
         try {

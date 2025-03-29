@@ -17,32 +17,30 @@ export default function Presents() {
         window.open("mailto:julien.degermann@gmail.com", "_blank");
     };
 
-    const onMouseMove = (e: MouseEvent | React.TouchEvent<HTMLDivElement>) => {
+    const onMouseMove = (e: MouseEvent) => {
         if (!isDragging) return;
+        e.preventDefault();
+        setMaxWidth(e.clientX);
 
-        if (event === "touchstart") {
-            setMaxWidth(e.touches[0].clientX);
-        } else {
-            e.preventDefault();
-            setMaxWidth(e.clientX);
-        }
         if (e instanceof MouseEvent) {
         } else {
         }
     };
 
-    const handleMouseUp = (
-        e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
-    ) => {
+    const onTouchMove = (e: TouchEvent) => {
+        setMaxWidth(e.touches[0].clientX);
+    };
+
+    const handleMouseUp = (e: MouseEvent | TouchEvent) => {
         setIsDragging(false);
         setEvent(e.type);
         document.removeEventListener("mousemove", onMouseMove);
     };
 
-    const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onMouseDown = (e: MouseEvent) => {
         setEvent(e.type);
         setIsDragging(true);
-        if(e.type === "mousedown") {
+        if (e.type === "mousedown") {
             e.preventDefault();
         }
     };
@@ -50,7 +48,7 @@ export default function Presents() {
     useEffect(() => {
         if (isDragging) {
             if (event === "touchstart") {
-                document.addEventListener("touchmove", onMouseMove);
+                document.addEventListener("touchmove", onTouchMove);
                 document.addEventListener("touchend", handleMouseUp);
             } else {
                 document.addEventListener("mousemove", onMouseMove);
@@ -70,8 +68,8 @@ export default function Presents() {
                 <div
                     id="heroTitle"
                     className="container"
-                    onMouseDown={onMouseDown}
-                    onTouchStart={onMouseDown}
+                    onMouseDown={ () => onMouseDown}
+                    onTouchStart={() => onMouseDown}
                     style={{
                         left: maxWidth ? maxWidth + "px" : "50%",
                         cursor: isDragging ? "grabbing" : "grab",

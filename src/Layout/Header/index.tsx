@@ -3,8 +3,8 @@ import './style.css'
 import {networks} from "../../core/datas/networks.ts";
 import {Link} from "react-router-dom";
 import {useState, useEffect} from "react";
-import CloseMenu from '../../components/SVG/CloseMenu.tsx'
-import OpenMenu from '../../components/SVG/OpenMenu.tsx'
+// import CloseMenu from '../../components/SVG/CloseMenu.tsx'
+// import OpenMenu from '../../components/SVG/OpenMenu.tsx'
 // import Navigation from "./Navigation";
 
 

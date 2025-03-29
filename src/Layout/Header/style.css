@@ -1,3 +1,7 @@
+html {
+    scrollbar-gutter: stable;
+}
+
 #header {
     background: none;
     position: fixed;
@@ -6,10 +10,11 @@
     padding: 1rem;
     width: 100%;
     z-index: 100;
+    /* background: var(--LIGHT_TO_TRANSPARENT); */
     background: var(--LIGHT_TO_TRANSPARENT);
+    backdrop-filter: blur(10px);
     font-size: 24px;
 }
-
 
 header .container {
     position: relative;
@@ -31,12 +36,12 @@ header .container {
 
     &::before {
         content: "💻";
-        margin-right: .5rem;
+        margin-right: 0.5rem;
     }
 }
 
 #header #headerPhone::before {
-    content: '📞 : ';
+    content: "📞 : ";
 }
 
 #header .links {
@@ -47,10 +52,6 @@ header .container {
 #header #networks {
     display: flex;
     width: max-content;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 1em;
 
     a:hover {
         position: relative;
@@ -64,32 +65,42 @@ header .container {
             background: var(--LIGHT);
             padding: 4px 8px;
             border-radius: 8px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
         }
 
         &#linkedin::before {
-            content: 'Linkedin';
+            content: "Linkedin";
         }
 
         &#github:hover::before {
-            content: 'GitHub';
+            content: "GitHub";
         }
 
         &:hover#mail::before {
-            content: 'Email';
+            content: "Email";
         }
 
         &:hover#phone::before {
-            content: 'Téléphone';
+            content: "Téléphone";
         }
     }
 
     a:active {
-        transform: scale(.9);
+        transform: scale(0.9);
     }
 
     img {
         width: 40px;
         margin: 0 8px;
+        
+        @media screen and (max-width: 768px) {
+            width: 25px;
+            margin: 0 4px;
+            
+        }
     }
 }
 
@@ -102,11 +113,16 @@ header .container {
     background: none;
     color: var(--DARK);
     margin: 0;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     font-size: 1em;
     font-weight: bold;
     padding: 0;
+    box-shadow: unset;
+
+    &::after {
+        all: unset;
+    }
 
     &:hover {
         box-shadow: unset;
@@ -116,15 +132,15 @@ header .container {
         fill: var(--DARK);
         width: 50px;
         height: 50px;
-        margin-left: .5em;
+        margin-left: 0.5em;
     }
 
     &.open::before {
-        content: 'Menu'
+        content: "Menu";
     }
 
     &.close::before {
-        content: 'Fermer'
+        content: "Fermer";
     }
 }
 
@@ -144,8 +160,6 @@ header .container {
     }
 
     li {
-        margin: .5em;
+        margin: 0.5em;
     }
-
 }
-

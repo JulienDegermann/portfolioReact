@@ -113,8 +113,9 @@ export default function ProjectCarousel() {
 export interface ProjectProps {
     title?: string
     need?: string
+    description?: string
     action?: string
-    url?: string
+    link?: string
     images?: string[]
     industry?: string
     stack?: string[]

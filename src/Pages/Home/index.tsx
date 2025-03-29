@@ -1,8 +1,8 @@
-import Contact from "./Sections/Contact.tsx";
+// import Contact from "./Sections/Contact.tsx";
 import Presents from "./Sections/Presents";
 import Projects from "./Sections/Projects";
-import Skills from "./Sections/Skills";
-import Values from "./Sections/Values";
+// import Skills from "./Sections/Skills";
+// import Values from "./Sections/Values";
 
 /**
  * displays home page content
@@ -12,10 +12,10 @@ export default function Home() {
     return (
         <>
             <Presents/>
-            <Skills/>
-            <Values/>
+            {/* <Skills/> */}
+            {/* <Values/> */}
             <Projects/>
-            <Contact/>
+            {/* <Contact/> */}
         </>
     )
 }

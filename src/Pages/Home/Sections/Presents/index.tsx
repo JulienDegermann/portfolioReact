@@ -1,40 +1,119 @@
 import Section from "../../../../components/Section";
-import Image from "../../../../assets/images/ide.jpeg";
-import ImageSmall from "../../../../assets/images/meSmall.webp";
-import ImageMedium from "../../../../assets/images/meMedium.webp";
-import './styles.css'
+import Back from "../../../../assets/images/back.webp";
+import Front from "../../../../assets/images/front.webp";
+import "./styles.css";
 import Button from "../../../../components/Button/index.tsx";
+import { useEffect, useState } from "react";
 
 // import {Colors} from "../../../../core/styles/colors.ts";
 // import NavBar from "./NavBar";
 
 export default function Presents() {
-    // const birthdate = new Date('1988-10-18');
-    // const now = new Date();
-    // const age = now.getMonth() < birthdate.getMonth() ? now.getFullYear() - birthdate.getFullYear() - 1 : now.getFullYear() - birthdate.getFullYear();
+    const [maxWidth, setMaxWidth] = useState<number>();
+    const [isDragging, setIsDragging] = useState(false);
+    const [event, setEvent] = useState("");
+
+    const mailTo = () => {
+        window.open("mailto:julien.degermann@gmail.com", "_blank");
+    };
+
+    const onMouseMove = (e: MouseEvent | React.TouchEvent<HTMLDivElement>) => {
+        if (!isDragging) return;
+
+        if (event === "touchstart") {
+            setMaxWidth(e.touches[0].clientX);
+        } else {
+            e.preventDefault();
+            setMaxWidth(e.clientX);
+        }
+        if (e instanceof MouseEvent) {
+        } else {
+        }
+    };
+
+    const handleMouseUp = (
+        e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
+    ) => {
+        setIsDragging(false);
+        setEvent(e.type);
+        document.removeEventListener("mousemove", onMouseMove);
+    };
+
+    const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+        setEvent(e.type);
+        setIsDragging(true);
+        if(e.type === "mousedown") {
+            e.preventDefault();
+        }
+    };
+
+    useEffect(() => {
+        if (isDragging) {
+            if (event === "touchstart") {
+                document.addEventListener("touchmove", onMouseMove);
+                document.addEventListener("touchend", handleMouseUp);
+            } else {
+                document.addEventListener("mousemove", onMouseMove);
+                document.addEventListener("mouseup", handleMouseUp);
+            }
+        }
+
+        return () => {
+            document.removeEventListener("mouseup", handleMouseUp);
+            document.removeEventListener("mousemove", onMouseMove);
+        };
+    }, [isDragging]);
 
     return (
-        <Section
-            id="presents"
-            hero={true}
-        >
-            <picture>
-                <source srcSet={ImageSmall} media="(max-width: 400px)"/>
-                <source srcSet={ImageMedium} media="(max-width: 800px)"/>
-                <img src={Image} alt="photo de julien degermann"/>
-            </picture>
-            <div className={'container'}>
-                <div id="heroTitle">
-                    <h2>Besoin de renforcer <br/><span>votre équipe ?</span></h2>
-                    <h3>Développeur Full-Stack</h3>
-                    <div>PHP | Symfony | JS | TS | React</div>
+        <Section id="presents" hero={true}>
+            <div id="sliderWrapper">
+                <div
+                    id="heroTitle"
+                    className="container"
+                    onMouseDown={onMouseDown}
+                    onTouchStart={onMouseDown}
+                    style={{
+                        left: maxWidth ? maxWidth + "px" : "50%",
+                        cursor: isDragging ? "grabbing" : "grab",
+                    }}
+                >
+                    <h2>
+                        Besoin de renforcer <br />
+                        <span>votre équipe ?</span>
+                    </h2>
                     <Button
-                        id={'contact'}
-                        text={'me contacter'}
-                        className={'cta'}
+                        id={"contact"}
+                        text={"contactez-moi"}
+                        className={"cta"}
+                        onClick={() => mailTo()}
                     />
+                </div>
+                <div
+                    id="left"
+                    className="slider"
+                    style={{
+                        maxWidth: maxWidth ? maxWidth + "px" : "100%",
+                    }}
+                >
+                    <img src={Back} alt="photo de julien degermann" />
+                    <h2>Backend</h2> <br />
+                    <p>#Symfony #Laravel #Wordpress</p>
+                </div>
+                <div id="middle"></div>
+                <div
+                    id="right"
+                    className="slider"
+                    style={{
+                        maxWidth: maxWidth
+                            ? "calc(100% - " + maxWidth + "px"
+                            : "100%",
+                    }}
+                >
+                    <img src={Front} alt="photo de julien degermann" />
+                    <h2>Frontend</h2> <br />
+                    <p>#React #Bootstrap</p>
                 </div>
             </div>
         </Section>
-    )
+    );
 }

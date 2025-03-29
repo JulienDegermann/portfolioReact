@@ -16,5 +16,5 @@ interface ButtonProps {
     text: string,
     id?: string,
     className?: string,
-    onClick?: void
+    onClick?: () => void
 }

@@ -1,12 +1,11 @@
-import { Colors } from "../core/styles/colors";
+// import { Colors } from "../core/styles/colors";
 
 export default function Footer() {
   return (
     <footer
       style={{
-        height: '100px',
-        backgroundColor: Colors.DARK,
-        color: Colors.PRIMARY,
+        padding: '3rem',
+        marginTop: '3rem'
       }}
     >
       <div
@@ -21,7 +20,7 @@ export default function Footer() {
             width: '100%'
           }}
         >
-          Designed and developed with ♥️ by Julien DEGERMANN</p>
+          Designed and developed with ♥️ <br /> by Julien DEGERMANN</p>
 
       </div>
 

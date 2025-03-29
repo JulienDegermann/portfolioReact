@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {useState, useEffect} from "react";
 import CloseMenu from '../../components/SVG/CloseMenu.tsx'
 import OpenMenu from '../../components/SVG/OpenMenu.tsx'
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 
 
 export default function Header() {
@@ -14,13 +14,12 @@ export default function Header() {
 
     // avoid scroll when menu is opened
     useEffect(() => {
-        document.body.style.overflow = menuOpened ? 'hidden' : 'scroll'
+        document.body.style.overflow = menuOpened ? 'hidden' : 'auto'
     }, [menuOpened])
 
     // function to close menu by pressing "escape" key
     const escape = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
-            console.log('coucou')
             setMenuOpened(false)
         }
     }
@@ -51,7 +50,7 @@ export default function Header() {
                                 </a>)
                             }
                         </div>
-                        <button
+                        {/* <button
                             id={'menuToggle'}
                             aria-label={menuOpened ? 'Fermer le menu de navigation' : 'Ouvrir le menu de navigation'}
                             className={menuOpened ? 'close' : 'open'}
@@ -62,13 +61,13 @@ export default function Header() {
                         >
                             {menuOpened ? <CloseMenu/> : <OpenMenu/>}
 
-                        </button>
+                        </button> */}
                     </div>
                 </div>
 
 
             </div>
-            <Navigation menuOpened={menuOpened}/>
+            {/* <Navigation menuOpened={menuOpened}/> */}
         </header>
     )
 }

@@ -1,14 +1,18 @@
 :root {
     /* colors */
-    --PRIMARY: #FFC700;
-    --SECONDARY: #C20114;
-    --LIGHT: #F7F6F1;
-    --DARK: #3B3A37;
+    --PRIMARY: #ffc700;
+    --SECONDARY: #c20114;
+    --LIGHT: #f7f6f1;
+    --DARK: #3b3a37;
     --BACK: #0c120c3b;
     --BACK: #999999;
-
+    --LIGHT_50: #f7f6f15a;
     /*  gradients */
-    --LIGHT_TO_TRANSPARENT: linear-gradient(180deg, var(--LIGHT) 70%, transparent 100%)
+    --LIGHT_TO_TRANSPARENT: linear-gradient(
+        180deg,
+        var(--LIGHT_50) 70%,
+        transparent 100%
+    );
 }
 
 * {
@@ -18,18 +22,18 @@
     list-style: none;
     text-decoration: none;
     font-weight: normal;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
-header, footer, div {
+header,
+footer,
+div {
     width: inherit;
 }
 
-
-*::selection{
-    color:var(--DARK);
-    background:var(--PRIMARY);
-
+*::selection {
+    color: var(--DARK);
+    background: var(--PRIMARY);
 }
 html {
     scroll-behavior: smooth;
@@ -38,9 +42,34 @@ html {
 body {
     background: var(--LIGHT);
     color: var(--DARK);
-    font-family: 'alumni sans';
-    letter-spacing: .05em;
+    font-family: "alumni sans";
+    letter-spacing: 0.05em;
     font-size: 18px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    /* scrollbar styling */
+    scrollbar-width: 5px;
+    scrollbar-color: var(--PRIMARY);
+    scrollbar-gutter: stable;
+}
+/* Webkit scrollbar styling (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    background: var(--LIGHT);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--DARK);
+    cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--PRIMARY);
 }
 
 .container {

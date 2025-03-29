@@ -1,5 +1,5 @@
 {
-  "name": "kevapp",
+  "name": "portfolioreact",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,10 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "homepage": "https://github.com/JulienDegermann/portfolioReact",
-
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^1.7.2",

@@ -3,6 +3,7 @@ import {ProjectContext} from "../../../../../hooks/contexts/useProjects.tsx"
 import ProjectCard from "./ProjectCard"
 import {Colors} from "../../../../../core/styles/colors.ts"
 import Link from "../../../../../components/Link.tsx"
+import {ProjectProps} from "../../../../../components/Cards/Card.tsx"
 
 
 export default function ProjectCarousel() {
@@ -110,16 +111,16 @@ export default function ProjectCarousel() {
     )
 }
 
-export interface ProjectProps {
-    title?: string
-    need?: string
-    description?: string
-    action?: string
-    link?: string
-    images?: string[]
-    industry?: string
-    stack?: string[]
-    createdAt?: string
-    updatedAt?: string,
-    stacks?: string[]
-}
+// export interface ProjectProps {
+//     title?: string
+//     need?: string
+//     description?: string
+//     action?: string
+//     link?: string
+//     images?: string[]
+//     industry?: string
+//     stack?: string[]
+//     createdAt?: string
+//     updatedAt?: string,
+//     stacks?: string[]
+// }

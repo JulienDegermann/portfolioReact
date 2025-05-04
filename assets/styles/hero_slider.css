@@ -4,6 +4,10 @@
     height: 80lvh;
     width: 100vw;
 
+    @media screen and (min-width: 720px) and (orientation: landscape) {
+        height: 100vh;
+    }
+
     #hero_wrapper {
         display: flex;
         align-items: center;

@@ -1,0 +1,10 @@
+services:
+    portfolio:
+        image: portfolio_react
+        restart: always
+        container_name: portfolio
+        ports:
+            - 80:80
+        build:
+            context: .
+            dockerfile: ./Dockerfile

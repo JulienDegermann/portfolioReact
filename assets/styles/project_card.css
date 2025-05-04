@@ -1,0 +1,98 @@
+#projects_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+
+    @media screen and (min-width: 1400px) {
+        grid-template-columns: repeat(3, minmax(400px, 1fr));
+    }
+}
+
+.projects_card {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid var(--DARK);
+    border-radius: 4px;
+    aspect-ratio: 16/9;
+
+    &::before {
+        content: "voir le site en ligne";
+        color: red;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 20;
+        background: var(--DARK);
+        color: var(--LIGHT);
+        padding: 0.5em 1em;
+        transition: transform 0.3s ease-in-out;
+
+        @media screen and (pointer: fine) {
+            transform: translateX(110%);
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+        transform: scale(1.3);
+    }
+    .projects_text {
+        position: absolute;
+        bottom: 0%;
+        right: 0;
+        background: var(--LIGHT);
+        color: var(--DARK);
+        width: 100%;
+        
+        @media screen and (pointer: fine) {
+            transform: translateY(100%);
+        }
+
+        :not(p) {
+            width: 100%;
+        }
+
+        > :not(img) {
+            padding: 0.5em 1em;
+        }
+
+        .projects_title {
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 0.7;
+
+            padding: 0.5em 1em;
+            width: 100%;
+        }
+        .projects_description {
+            font-size: 0.7em;
+        }
+        .projects_stacks {
+            font-style: italic;
+            font-size: 0.8em;
+        }
+    }
+
+    @media screen and (pointer: fine) {
+        &:hover {
+            outline-width: 5px;
+
+            .projects_text {
+                transform: translateY(0);
+            }
+
+            &::before {
+                transform: translateX(0);
+            }
+        }
+    }
+}

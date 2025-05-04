@@ -1,0 +1,31 @@
+section {
+    padding: 1rem 2rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 3rem 4rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 6rem 4rem;
+    }
+}
+
+section#presents {
+    padding: 0;
+    margin-top: 0;
+}
+
+section .section_title {
+    color: var(--DARK);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-align: left;
+    border-bottom: 1px solid var(--DARK);
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+section .container:where(.large, .hero) {
+    max-width: 100%;
+}

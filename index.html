@@ -1,33 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="CHANGER LA DESCRIPTION" />
+        <meta name="author" content="Julien Degermann" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="A la recherche d'un développeur pour renforcer votre équipe ? Je suis Julien, développeur Full Stack (PHP, JS, TS)" />
-  <meta name="author" content="Julien Degermann" />
+        <meta
+            property="og:title"
+            content="Julien DEGERMANN : développeur web Full Stack"
+        />
+        <meta property="og:description" content="CHANGER LA DESCRIPTION" />
+        <meta property="og:image" content="./vite.svg" />
+        <meta property="og:url" content="http://ju2breizh.fr" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:site_name"
+            content="Julien DEGERMANN : développeur web Full Stack"
+        />
+        <meta property="og:locale" content="fr_FR" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="./assets/styles/index.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
 
-  <meta property="og:title" content="Julien Degermann - Fullstack Developer" />
-  <meta property="og:description"
-    content="A la recherche d'un développeur pour renforcer votre équipe ? Je suis Julien, développeur Full Stack (PHP, JS, TS)" />
-  <meta property="og:image" content="/vite.svg" />
-  <meta property="og:url" content="https://juliendegermann.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Julien Degermann" />
-  <meta property="og:locale" content="fr_FR" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Julien Degermann - Développeur Web Full Stack</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="/"><h1 id="main_title">Julien Degermann</h1></a>
+                <div id="contact_bar"></div>
+            </div>
+        </header>
+        <section id="presents">
+            <div id="hero_wrapper">
+                <div id="hero_title">
+                    <h2>
+                        Besoin de renforcer <br />
+                        <span>votre équipe ?</span>
+                    </h2>
+                    <a
+                        href="mailto:degermann.julien@gmail.com"
+                        class="cta button"
+                        >contactez-moi</a
+                    >
+                </div>
+                <div class="hero_side" id="front">
+                    <img
+                        src="assets/images/frontend.webp"
+                        alt="image développeur front end"
+                    />
+                    <h3 class="hero_side_title">Front End</h3>
+                    <p class="hero_side_stacks">#React #JS #TS #Bootstrap</p>
+                </div>
 
+                <div class="hero_side" id="separator"></div>
+                <div class="hero_side" id="back">
+                    <img
+                        src="assets/images/backend.webp"
+                        alt="image développeur back end"
+                    />
+                    <h3 class="hero_side_title">Back End</h3>
+                    <p class="hero_side_stacks">
+                        #Symfony #Laravel #Wordpress #PHP
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <title>Julien Degermann - Fullstack Developer</title>
-</head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+        <section id="projects">
+            <div class="container">
+                <h3 class="section_title">Mes projets</h3>
+                <div id="projects_wrapper"></div>
+            </div>
+        </section>
+        <footer>
+            <p>
+                Designed & developed with 💻 by <a href="https://www.linkedin.com/in/julien-degermann/" target="_blank">Julien Degermann</a>
+            </p>
+        </footer>
+        <script type="module" src="assets/scripts/index.js"></script>
+    </body>
 </html>

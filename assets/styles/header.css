@@ -1,0 +1,92 @@
+header {
+    background: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    z-index: 100;
+    background: var(--LIGHT_TO_TRANSPARENT);
+    backdrop-filter: blur(10px);
+    font-size: 24px;
+}
+
+header .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #main_title {
+    text-align: center;
+    cursor: pointer;
+    width: max-content;
+    color: var(--DARK);
+    font-size: 1em;
+
+    &::before {
+        content: "💻";
+        margin-right: 0.5rem;
+    }
+}
+
+header .links {
+    width: auto;
+    display: flex;
+}
+
+header #contact_bar {
+    display: flex;
+    width: max-content;
+
+    a:hover {
+        position: relative;
+        transform: scale(1.1);
+
+        &::before {
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--LIGHT);
+            padding: 4px 8px;
+            border-radius: 8px;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+
+        &#linkedin::before {
+            content: "Linkedin";
+        }
+
+        &#github:hover::before {
+            content: "GitHub";
+        }
+
+        &:hover#mail::before {
+            content: "Email";
+        }
+
+        &:hover#phone::before {
+            content: "Téléphone";
+        }
+    }
+
+    a:active {
+        transform: scale(0.9);
+    }
+
+    img {
+        width: 40px;
+        margin: 0 8px;
+        
+        @media screen and (max-width: 768px) {
+            width: 25px;
+            margin: 0 4px;
+            
+        }
+    }
+}

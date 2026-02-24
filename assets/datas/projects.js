@@ -47,6 +47,13 @@ const projects = [
         link: "https://github.com/JulienDegermann/newparrotauto",
         stacks: ["Symfony", "PHP", "MySQL", "JS"],
     },
+    {
+        title: "PokéClub",
+        description: "Site vitrine",
+        image: "pokeclub.webp",
+        link: "http://pokeclub.ju2breizh.fr/",
+        stacks: ["Wordpress", "PHP", "MySQL", "JS"],
+    },
 ];
 
 export default projects;
